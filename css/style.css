@@ -1,0 +1,186 @@
+/* body margin is cancer no comment */
+body{
+    margin: 0px;
+}
+
+.noHeight{
+    height: 0px;
+}
+
+.gateway{
+    background:black;
+    height: 25vh;
+    width: 100%;
+    border-bottom: solid 10px;
+}
+
+.growing{
+    animation: growing 6s linear infinite;
+}
+
+@keyframes growing {
+    from {border-color: #414947;}
+    25% {border-color: #17fff3;}
+    50% {border-color: #414947;}
+    to {border-color: #414947;}
+}
+
+#gate{
+    height: 100vh;
+    background: black;
+}
+
+#verticleLightTop{
+    position: relative;
+    width: 0px;
+    height: 50%;
+    border-left: solid 5px #414947;
+    border-right: solid 5px #414947;
+    top: -20px;
+    left: 50%;
+}
+
+#noHeightContainer{
+    position:relative;
+    bottom: 59vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#verticleLightBot{
+    position: relative;
+    width: 0px;
+    height: 47.5%;
+    border-left: solid 5px #414947;
+    border-right: solid 5px #414947;
+    left: 50%;
+}
+
+#horizontalLightLeft{
+    position: relative;
+    border-top: solid 5px #414947;
+    border-bottom: solid 5px #414947;
+    top: 50%;
+    width: 50%;
+}
+
+#horizontalLightRight{
+    position: relative;
+    border-top: solid 5px #414947;
+    border-bottom: solid 5px #414947;
+    top: 49%;
+    left: 50%;
+    width: 50%;
+}
+
+.gateLight{
+    position: relative;
+    z-index: 1;
+}
+
+/*gear start*/
+
+#gear{
+    position: relative;
+    background: #8d8d8d;
+    top: -59vh;
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 500px;
+    z-index: 1;
+}
+
+#gearCenter{
+    position:relative;
+    left: 15%;
+    top: 29px;
+    width: 110px;
+    height: 70px;
+    background: #8d8d8d;
+    z-index: 5;
+}
+
+#gearExterior{
+    position:relative;
+    left: 15%;
+    top: 29px;
+    width: 90px;
+    height: 90px;
+    border: solid 10px #17fff3;
+    border-radius: 0px 0px 150px 150px;
+}
+
+#gearTeeth1{
+    transform: rotate(45deg);
+}
+
+#gearTeeth2{
+    transform: rotate(90deg);
+}
+
+#gearTeeth3{
+    transform: rotate(135deg);
+}
+
+#gearTeeth4{
+    transform: rotate(0deg);
+}
+
+.gearTeeth{
+    position:relative;
+    width: 0px;
+    height: 50px;
+    border: solid 5px #17fff3;
+    top: 20px;
+    left: 50%;
+    z-index: 100;
+}
+/* gear end*/
+
+/* arc */
+
+#verticleLightArc{
+    position:relative;
+    width: 190px;
+    height: 190px;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 25px; 
+    background: #417417;
+}
+
+/* arc end*/
+
+@keyframes rotater{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.rotating{
+    animation: rotater 2s;
+}
+
+.schwartz{
+    height: 100vh;
+    width: 50vw;
+    background: black;
+    display: none;
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+}
+
+#lefty{
+}
+
+#righty{
+    left: 50%;
+}
+
+
+
+
+
+
