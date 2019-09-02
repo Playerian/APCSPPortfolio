@@ -63,7 +63,7 @@ body{
 #verticleLightBot{
     position: relative;
     width: 0px;
-    height: 47.5%;
+    height: calc(50% - 20px);
     border-left: solid 5px #414947;
     border-right: solid 5px #414947;
     left: 50%;
