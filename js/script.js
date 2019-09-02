@@ -23,7 +23,7 @@ $("#gear").click(function(){
     function openTheGate(){
         $('.gateway').hide();
         //animate them back to 0
-        $('#straighter, #gearExterior, #horizontalLightRight, #verticleLightTop, #verticleLightBot, #horizontalLightLeft').animate({"border-color": '#414947'}, 2000, function(){
+        $('#straighter, #gearExterior, #horizontalLightRight, #verticleLightTop, #verticleLightBot, #horizontalLightLeft').one('animationiteration webkitAnimationIteration', function(){
             $(this).removeClass('growing');
             $(this).css('border-color', '#414947');
             //animate center
