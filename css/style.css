@@ -96,7 +96,7 @@ body{
 #gearFake{
     position: relative;
     background: #FFFFFF;
-    top: -59vh;
+    top: calc(-50vh - 75px);
     width: 150px;
     height: 150px;
     margin-left: auto;
@@ -108,7 +108,7 @@ body{
 #gear{
     position: relative;
     background: #8d8d8d;
-    top: -59vh;
+    top: calc(-50vh - 75px);
     width: 150px;
     height: 150px;
     margin-left: auto;
