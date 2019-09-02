@@ -1,4 +1,5 @@
 /* body margin is cancer no comment */
+/* common classer*/
 body{
     margin: 0px;
 }
@@ -7,6 +8,9 @@ body{
     height: 0px;
 }
 
+/* end of common*/
+
+/* opening */
 .gateway{
     background:black;
     height: 25vh;
@@ -18,11 +22,20 @@ body{
     animation: growing 6s linear infinite;
 }
 
+.growingOnce{
+    animation: growingOnce 0.5s linear;
+}
+
 @keyframes growing {
     from {border-color: #414947;}
     25% {border-color: #17fff3;}
     50% {border-color: #414947;}
     to {border-color: #414947;}
+}
+
+@keyframes growingOnce {
+    from {border-color: #414947;}
+    to {border-color: #17fff3;}
 }
 
 #gate{
@@ -80,6 +93,18 @@ body{
 
 /*gear start*/
 
+#gearFake{
+    position: relative;
+    background: #FFFFFF;
+    top: -59vh;
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 500px;
+    z-index: 1;
+}
+
 #gear{
     position: relative;
     background: #8d8d8d;
@@ -104,7 +129,7 @@ body{
 
 #gearExterior{
     position:relative;
-    left: 15%;
+    left: calc(15% + 10px);
     top: 29px;
     width: 90px;
     height: 90px;
@@ -179,7 +204,126 @@ body{
     left: 50%;
 }
 
+/* end of opening*/
 
+/* main */
+#main{
+    display:none;
+    height: 100vh;
+}
+
+/* gear (paul allen op) */
+.parent{
+  display: flex;
+  /* 3 to it's limit */
+  height: 33.333333333%;
+  position: relative;
+  left: -100%;
+  width: 120%;
+  transition: height 2s;
+}
+
+.gear{
+  zoom: 50%;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #414947;
+  border-radius: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+  animation: spin 4s linear infinite;
+}
+
+.gear .center{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+  background: #17fff3;
+  border-radius: 50%;
+}
+
+.tooth{
+  position: absolute;
+  top: -25px;
+  left: 75px;
+  z-index: 1;
+  width: 45px;
+  height: 250px;
+  background:#414947;
+}
+
+.tooth:nth-child(2){
+  transform: rotate(45deg);
+}
+
+.tooth:nth-child(3){
+  transform: rotate(90deg);
+}
+
+.tooth:nth-child(4){
+  transform: rotate(135deg);
+}
+
+@keyframes spin {
+  from {transform: rotate(0deg); }
+  to {transform: rotate(360deg);}
+}
+
+.contentClicker{
+    width: 100vw;
+    height: 100%;
+    border: solid 1px;
+    background: #414947;
+}
+
+.clickerText{
+    text-align: center;
+    font-size: 48px;
+    color: white;
+}
+
+#topContentContainer, #midContentContainer, #botContentContainer{
+    display: none;
+}
+
+/*return button*/
+.returnBack{
+    width: 10vw;
+    height: 10vh;
+    border: solid;
+    margin-left: 5vw;
+    background: #595E33;
+    display: flex;
+}
+
+.arrowContainer{
+    margin: auto;
+    width: 7.07vw;
+    display: flex;
+}
+
+.leftStraight{
+    width: 5vw;
+    margin: auto;
+    color: white;
+    border: solid;
+}
+
+.leftArrow{
+    width: 3vw;
+    height: 3vw;
+    color: white;
+    border-left: solid 5px;
+    border-top: solid 5px;
+    transform: rotate(-45deg);
+    margin: auto;
+}
+
+/* end of main*/
 
 
 
