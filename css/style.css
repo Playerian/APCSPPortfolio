@@ -81,7 +81,7 @@ body{
     position: relative;
     border-top: solid 5px #414947;
     border-bottom: solid 5px #414947;
-    top: 49%;
+    top: calc(50% - 10px);
     left: 50%;
     width: 50%;
 }
@@ -96,11 +96,10 @@ body{
 #gearFake{
     position: relative;
     background: #FFFFFF;
-    top: calc(-50vh - 75px);
+    top: calc(-50vh - 70px);
     width: 150px;
     height: 150px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: calc(50% - 70px);
     border-radius: 500px;
     z-index: 1;
 }
@@ -108,11 +107,10 @@ body{
 #gear{
     position: relative;
     background: #8d8d8d;
-    top: calc(-50vh - 75px);
+    top: calc(-50vh - 70px);
     width: 150px;
     height: 150px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: calc(50% - 70px);
     border-radius: 500px;
     z-index: 1;
 }
@@ -129,7 +127,7 @@ body{
 
 #gearExterior{
     position:relative;
-    left: calc(15% + 10px);
+    left: calc(15% + 5px);
     top: 29px;
     width: 90px;
     height: 90px;
@@ -159,7 +157,7 @@ body{
     height: 50px;
     border: solid 5px #17fff3;
     top: 20px;
-    left: 50%;
+    left: calc(50% - 5px);
     z-index: 100;
 }
 /* gear end*/
@@ -284,6 +282,7 @@ body{
     text-align: center;
     font-size: 48px;
     color: white;
+    height: 10vh;
 }
 
 #topContentContainer, #midContentContainer, #botContentContainer{
@@ -298,12 +297,14 @@ body{
     margin-left: 5vw;
     background: #595E33;
     display: flex;
+    margin-bottom: 2vh;
 }
 
 .arrowContainer{
     margin: auto;
     width: 7.07vw;
     display: flex;
+    flex-grow: 999;
 }
 
 .leftStraight{
@@ -320,6 +321,24 @@ body{
     border-left: solid 5px;
     border-top: solid 5px;
     transform: rotate(-45deg);
+    margin: auto;
+}
+
+#topContentContainer{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+}
+
+.contentMenu{
+    border: solid 1px;
+    background: #414947;
+    flex-grow: 1;
+    display: flex;
+}
+
+.contentMenuText{
+    color: white;
     margin: auto;
 }
 
