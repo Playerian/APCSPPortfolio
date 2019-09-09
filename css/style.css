@@ -8,6 +8,11 @@ body{
     height: 0px;
 }
 
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
 /* end of common*/
 
 /* opening */
@@ -195,9 +200,6 @@ body{
     z-index: 0;
 }
 
-#lefty{
-}
-
 #righty{
     left: 50%;
 }
@@ -333,14 +335,58 @@ body{
 .contentMenu{
     border: solid 1px;
     background: #414947;
-    flex-grow: 1;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    transition: height 2s;
+    overflow-y: scroll;
 }
 
 .contentMenuText{
     color: white;
-    margin: auto;
+    width: 100%;
+    font-size: 32px;
+    height: 48px;
+    text-align: center;
 }
+
+.contentMenuContent{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* unit section */
+
+.unitSection{
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+}
+
+.unitQA{
+    width: inherit;
+}
+
+.unitTitle{
+    color: #FFFFFF;
+    width: inherit;
+    font-size: 24px;
+}
+
+.unitQuestion{ 
+    color: #ffbb00;
+    width: inherit;
+    font-size: 18px;
+}
+
+.unitAnswer{
+    color: #17fff3;
+    width: inherit;
+    font-size: 18px;
+}
+
+/* end of unit section */
 
 /* end of main*/
 

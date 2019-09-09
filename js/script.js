@@ -1,6 +1,10 @@
 //vars
-var clickable = false;
-var unitClickable = false;
+var menuLevel = 0;
+// 0 - init phase
+// 1 - base
+// 2 - first Menu
+// 3 - unit Q&A
+var animating = false;
 
 //opening the door
 $("#gear").click(function(){
@@ -81,7 +85,7 @@ function mainOpening(){
         //bot show
         $('#botContent').show();
         $("#botContent").animate({"left": "0%"}, 4000, function(){
-            clickable = true;
+            menuLevel = 1;
             $('body').css("background", "#414947");
             //remove gears and set width
             $(".gear").remove();
@@ -94,32 +98,57 @@ function mainOpening(){
 }
 
 //handlers
-$("#topClicker").click(function(){
-    if (clickable === true){
-        clickable = false;
-        $("#midContent, #botContent").hide();
-        $("#topContent").css('height', "100vh");
-        $("#topContentContainer").show();
-        unitClickable = true;
-    }
-});
-
 $(".returnBack").click(function(){
-    if (clickable === false){   
+    if (animating){
+        return;
+    }
+    if (menuLevel === 2){   
         $("#topContent").css('height', "33vh");
         $('#topContentContainer, #midContentContainer, #botContentContainer').hide();
         $("#topContent, #midContent, #botContent").show();
         setTimeout(function(){
-            clickable = true;
+            menuLevel = 1;
         }, 2000);
+    }
+    if (menuLevel === 3){
+        $('.contentMenu').show();
+        $(".contentMenu").css("height", `${80 / $(".contentMenu").length}vh`);
+        $(".contentMenuContent").hide();
+        menuLevel = 2;
+    }
+});
+
+$("#topClicker").click(function(){
+    if (menuLevel === 1){
+        menuLevel = 2;
+        $("#midContent, #botContent").hide();
+        $("#topContent").css('height', "100vh");
+        $("#topContentContainer").show();
+        $('.contentMenu').show();
+        $(".contentMenuContent").hide();
+        $(".contentMenu").css("height", `${80 / $(".contentMenu").length}vh`);
     }
 });
 
 $("#unit2Clicker").click(function(){
-
+    if (menuLevel === 2){
+        $(".contentMenu").css("height", "0px");
+        $(this).css('height', "80vh");
+        animating = true;
+        setTimeout(function(){
+            $(".contentMenu").hide();
+            $("#unit2Clicker").show();
+            $("#unit2Content").show();
+            menuLevel = 3;
+            animating = false;
+        }, 2000);
+    }
 });
 
+//presets
 $('#topContentContainer, #midContentContainer, #botContentContainer').hide();
+$(".contentMenu").css("height", `${80 / $(".contentMenu").length}vh`);
+$(".contentMenuContent").hide();
 
 //test purpose
 // mainOpening();
