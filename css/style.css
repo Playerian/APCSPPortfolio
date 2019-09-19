@@ -16,6 +16,18 @@ body{
 /* end of common*/
 
 /* opening */
+#cusBar{
+    position: fixed;
+    background: #006699;
+    width: 3vw;
+    height: 10vh;
+    top: 0vh;
+    left: 97vw;
+    border-top: 3vw solid #006699;
+    border-bottom: 3vw solid #006699;
+    border-radius: 123px;
+}
+
 .gateway{
     background:black;
     height: 25vh;
@@ -362,10 +374,12 @@ body{
     display: flex;
     flex-direction: column;
     width: inherit;
+    margin-bottom: 15px;
 }
 
 .unitQA{
     width: inherit;
+    margin-bottom: 10px;
 }
 
 .unitTitle{

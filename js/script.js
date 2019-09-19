@@ -6,6 +6,12 @@ var menuLevel = 0;
 // 3 - unit Q&A
 var animating = false;
 
+
+//scroll bar
+$(document).scroll(function(){
+    $("#cusBar").css("top", `${$(document).scrollTop() / ($(document).height() - window.innerHeight) * 83}vh`);
+});
+
 //opening the door
 $("#gear").click(function(){
     if ($(document).scrollTop() - ($(document).height() - window.innerHeight) === 0){
