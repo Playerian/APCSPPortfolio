@@ -348,7 +348,6 @@ body{
     border: solid 1px;
     background: #414947;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     transition: height 2s;
     overflow-y: scroll;
