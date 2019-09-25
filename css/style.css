@@ -19,6 +19,10 @@ img, video{
     object-fit: contain;
 }
 
+a{
+    color: rgb(255, 164, 247)
+}
+
 /* end of common*/
 
 /* opening */
