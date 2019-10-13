@@ -162,15 +162,17 @@ $("#topClicker").click(function(){
     }
 });
 
-$("#unit2Clicker").click(function(){
+$(".contentMenu").click(function(){
     if (menuLevel === 2 && animating === false){
         $(".contentMenu").css("height", "0px");
         $(this).css('height', "80vh");
         animating = true;
+        let $this = $(this);
         setTimeout(function(){
             $(".contentMenu").hide();
-            $("#unit2Clicker").show();
-            $("#unit2Content").show();
+            $this.show();
+            $this.find(".contentMenuText").show();
+            $this.find(".contentMenuContent").show();
             menuLevel = 3;
             animating = false;
         }, 2000);
