@@ -148,6 +148,9 @@ $(".returnBack").click(function(){
         $(".contentMenuContent").hide();
         menuLevel = 2;
     }
+    if (window.location.protocol !== "file:"){
+        history.pushState({}, null, `index.html`);
+    }
 });
 
 $("#topClicker").click(function(){
@@ -170,6 +173,9 @@ $(".contentMenu").click(function(){
         let $this = $(this);
         setTimeout(function(){
             $(".contentMenu").hide();
+            if ($this.attr("unit") && window.location.protocol !== "file:"){
+                history.pushState({}, null, `unit${$this.attr("unit")}.html`);
+            }
             $this.show();
             $this.find(".contentMenuText").show();
             $this.find(".contentMenuContent").show();
