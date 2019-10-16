@@ -149,7 +149,7 @@ $(".returnBack").click(function(){
         menuLevel = 2;
     }
     if (window.location.protocol !== "file:"){
-        history.pushState({}, null, `index.html`);
+        history.pushState({}, null, ``);
     }
 });
 
