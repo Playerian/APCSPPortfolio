@@ -413,6 +413,13 @@ a{
 
 /* end of main*/
 
+.blacked{
+    color: black;
+    background: black;
+}
 
+.blacked:hover{
+    color: white;
+}
 
 

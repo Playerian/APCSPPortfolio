@@ -6,6 +6,9 @@ var menuLevel = 0;
 // 3 - unit Q&A
 var animating = false;
 
+console.log("meowmeowmeow!meowmeowmeowmeow!");
+console.log("^-^");
+
 //cookie
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();

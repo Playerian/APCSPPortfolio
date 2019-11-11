@@ -455,9 +455,195 @@
                                 </div>
                             </div>
                         </div>
-                        <div class='topContent contentMenu' >
+                        <div id='unit4Clicker' class='topContent contentMenu' unit='4'>
                             <div class='contentMenuText'>
-                                Construction...
+                                Unit 4 - Animation, Simulation, & Modeling		
+                            </div>
+                            <div id='unit4Content' class='contentMenuContent'>
+                                <div class='unitSection'>
+                                    <div class='unitTitle'>4.2 - Lights Off Tutorial</div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>1) This app presents a new type of event which you haven't encountered before. What is that new event? How often is it triggered?</div>
+                                        <div class='unitAnswer'>This event is the sprite on canvas moves every some time of the clock. It is triggered base on the phone's clock of a certain interval.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>2) Consider the apps you've developed so far. Can you list all the different events your apps have responded to? What other events do you think an app can respond to? Explore some of the components in App Inventor and see what event handlers they have.</div>
+                                        <div class='unitAnswer'>The events include touching button or sprite, clocks, phone shakes, taken picture, picking from a list. I think apps can respond to almost anything that was on the phone. I explored there was an event that triggers when screen is changed.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>3) What are the advantages of writing procedures in programming? Use the procedures you wrote for this app as examples in your response.</div>
+                                        <div class='unitAnswer'>Writing procedures help simlify the codes into abstractions that can be called multiple times throughout the app. The procedure I wrote was to set all texts in the game like scores into the variable, so every time a variable like score is changed, all the text would be updated.</div>
+                    
+                                    </div>
+                                </div>
+                                <div class='unitSection'>
+                                    <div class='unitTitle'>4.3 - Lights Off Projects</div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>1) Describe the purpose of each enhancement that you added to your app. Give brief descriptions of the enhancements and provide screenshots of important blocks and describe how you used them to solve certain programming problems. Include these descriptions in your write-up, below.</div>
+                                        <div class='unitAnswer'>I made the picture of the imageSprite changes every time it moves into a differnet location. I used an abstraction with a procedure and random number generator to do this.</div>
+                                        <div class='unitQuestion'>
+                                            <img src="img/4_3_pic1.png">
+                                        </div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>2) When the user touches an ImageSprite, both the Canvas.Touched and ImageSprite.Touched events are triggered. This is important for more complex games. For instance, suppose there are "good" and "bad" sprites in your game. If you hit one, you earn a point. If you hit the other, you lose two points. If you hit the Canvas and don't hit the ImageSprite, you lose 1 point. How would you code this?</div>
+                                        <div class='unitAnswer'>The first functionality can be achieved by using two different ImageSprite with two different click event. The second one is a little more complicated. I suppose don't know which event handler would trigger first, so I will have two separate events of canvas click and sprite click. When one of them is clicked, the corresponding variable would be set to one and call the procedure that checks if both variable is on. When both variable is setted to true then it would awards a point, else it would lose point.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>3) How do you speed up the movement of the ImageSprite? What is the fastest it could move?</div>
+                                        <div class='unitAnswer'>The clock can be set to a lower time Interval, so it triggers faster. The fastest speed is about 10ms according to a race between my timer and mobile phone timer because the tablet's hardware can not process faster information with its <span class="blacked">crappy</span> processor.</div>
+                                    </div>
+                                </div>
+                                <div class='unitSection'>
+                                    <div class='unitTitle'>4.4 - Logo, Part 1</div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>1) Include a screenshot of your app's face drawing, and the code involved, showing the use of a loop and a procedure. You can take a screenshot on most Android devices by pressing the power button and the volume down button and the same time and then emailing the photo from the gallery to yourself, or uploading the image to Google Drive. To practice for the Create task, describe how two of the algorithms (procedures that you wrote) in the code combine to form a bigger algorithm (the drawFace procedure).</div>
+                                        <div class='unitQuestion'>
+                                            <img src="img/4_4_pic1.png">
+                                        </div>
+                                        <div class='unitQuestion'>
+                                            <img src="img/4_4_pic2.png">
+                                        </div>
+                                        <div class='unitAnswer'>The square 100 algorithm first draws a rectangle, and then the draw left eye algorithm draws the left eye after the rectangle. They forms a bigger algorithm of draw face where all features are drawn.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>2) Can you draw a triangle with this set of Logo commands? Discuss how or why not.</div>
+                                        <div class='unitAnswer'>No, the rotation is limited to 90 degree angle, either to left or right. A triangle has a sum of 180 degree of all interior angle, so it's not possible to make a triangle with only 90 degree angles.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>3) Discuss: If you were designing the Logo language, how would you change some of our basic commands so that it would be easy to draw a triangle and easier to draw other shapes -- i.e., what should the basic commands do that would make drawing easier.</div>
+                                        <div class='unitAnswer'>I would add another function that is able to set the rotation angle, so it could draw any shape, even circle with very low angle.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>4) What weaknesses do you find in using the procedures (the abstractions) we gave you -- forward, turn -- for drawing simple shapes? How would you change the definitions of these procedures to make it easier to draw shapes? Give a specific example that illustrates how a more powerful set of procedures would improve things.</div>
+                                        <div class='unitAnswer'>It is difficult because there are a lots of repetitions involve in drawing a shape, multiple times of rotate, forward, and pen up pen down. I would let the procedure accepts input so it doesn't need that much repetition.</div>
+                                    </div>
+                                </div>
+                                <div class='unitSection'>
+                                    <div class='unitTitle'>4.5 - Coin Flip Simulation Tutorial</div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>1) Write an if/else statement to express the following real life situation. Mary likes ice cream and always chooses chocolate unless there is no chocolate in which case she chooses strawberry. But if there’s no strawberry either then she settles for vanilla, which, for some reason, is always available.</div>
+                                        <div class='unitAnswer'>if chocolate then choose chocolate else if strawberry then choose strawberry else choose vanilla.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>2) We didn’t need it for the loop in this lesson, but the number element in the For each number loop is a local variable whose value changes automatically on each iteration of the loop. For example, in this loop number would start at 1 and then go to 2, 3 and 4. And this value can be used in the body of the loop, as shown in this example. Given that, trace through this loop and figure out what value global sum would have when the loop finishes.</div>
+                                        <div class='unitQuestion'>
+                                            <img src="img/4_5_pic1.png">
+                                        </div>
+                                        <div class='unitAnswer'>Sum is initially 0, then it adds 1, 2, 3, 4 with the loop and then stop. So the final number would be 10.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>3) App Inventor’s random-integer block is an abstract model of randomness -- i.e., an abstraction of real randomness such as flipping a real coin. What would you say about the random-integer block if you ran the coin flipping simulation 10,000 times and the result was that it came up heads 55% of the time?</div>
+                                        <div class='unitAnswer'>It would not be a good randomness model because with a large number of trials, it should comes up very close to 50% but it doesn not. </div>
+                                    </div>
+                                </div>
+                                <div class='unitSection'>
+                                    <div class='unitTitle'>4.6 - Coin Flip Experiment</div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>1) "(POGIL) According to your results, does App Inventor's PRNG provide a good model of randomness?"</div>
+                                        <div class='unitAnswer'>App Inventor's PRNG does provide a good model of randomness because the results are close to 50%. After sum up the results from the whole class it gets more closer to 50%.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>2) (POGIL) A friend claims that flipping a coin 100 times and finding that it comes up heads only 45% of the time shows that the coin is biased. How should you reply?</div>
+                                        <div class='unitAnswer'>I think it is not bias because this friend only flipped 100 times and it is not enough trials to determine whether or not the coin is bias. This friend should do more trials in order to see if it's bias or not.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>3) Because we are using a coin flip app, this experiment really tests only that App Inventor's random integer block generates a 1 around half the time. Is this a sufficient test for App Inventor's PRNG? What other experiments might you do to increase your confidence in App Inventor’s PRNG?</div>
+                                        <div class='unitAnswer'>I think we can test numbers from 0 to 100 for a lots of times so I can see that if the apperance of all the numbers have the same distribution to see if it's truly random.</div>
+                                    </div>
+                                </div>
+                                <div class='unitSection'>
+                                    <div class='unitTitle'>4.7 - Pseudo Random Numbers</div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>1) Consider the following Dilbert cartoon? Would it be possible for a PRNG to spit out 6 NINEs in a row?</div>
+                                        <div class='unitQuestion'>
+                                            <img src="img/4_7_pic1.png">
+                                        </div>
+                                        <div class='unitAnswer'>It is not very likely possible because algorithms of PRNG is usually designed to use an output as it's input so repetitions would not happen, except when it's algorithm starts to repeat itself.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>2) Are slot machines fair? Why or why not?</div>
+                                        <div class='unitAnswer'>Slot machines are not fair because all slot machines have return rate of less than 100% so the casino can win money, so this means that when the number of trials are big enough the players would lose money.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>3) Is it possible to devise a method that would allow you to win consistently on a slot machine?</div>
+                                        <div class='unitAnswer'>No, slot machines are determined base on PRNG and this can not be changed unless the hardware is editable.</div>
+                                    </div>
+                                </div>
+                                <div class='unitSection'>
+                                    <div class='unitTitle'>4.8 - Real World Models</div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>1) What are the main differences between Bill Nye's solar system model and the Second Life model?</div>
+                                        <div class='unitAnswer'>Bill Nye's model is scaled in term of distance between the planets and the sun, but the Second Life model does not scale that.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>2) (POGIL) What would happen if there were lots more wolves than there are bunnies? Would the wolves live forever? Record your hypothesis, prediction and experiment results.</div>
+                                        <div class='unitAnswer'>The bunnies would be eaten by the wolves, then the wolves ran out of foods and dies. <span class="blacked">Grass lives forever</span></div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>3) (POGIL) This model chose to include certain features and exclude other features. For example, this simulation only includes rabbits, wolves, and grass but there are other predators of rabbits and other food sources for rabbits. Why do you think the creators focused on these data elements and not others? How might this introduce bias (concentration on or interest in a particular area) into the simulation?</div>
+                                        <div class='unitAnswer'>This model only choose grass, wolves, and rabbits because it’s an abstraction of nature so they ignore other things that affects rabbits, grasses, and wolves such that some predators might eat wolves too. This introduce bias because the abstraction tend to ignore other things that might be important in how nature works.</div>
+                                    </div>
+                                </div>
+                                <div class='unitSection'>
+                                    <div class='unitTitle'>4.9 - Abstraction: Inside the CPU </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>1) "Which generation of the 4-bit simulators above is the most abstract? Why?"</div>
+                                        <div class='unitAnswer'>The machine assembly simulator is the most abstract because it is able to use letters as instructions instead of purely 0 and 1.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>2) Explain the purpose or function of the RAM and the CPU. </div>
+                                        <div class='unitAnswer'>The RAM stores temporary data that should be fed into the CPU which then the CPU executes the instructions within the RAM to calculate and return the result.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>3) Describe in your own words the difference between the fetch and execute steps. </div>
+                                        <div class='unitAnswer'>Fetch is loading instructions in RAM into the CPU, execute is executes instructions stored in CPU so it works.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>4) Summarize the differences between assembly language and machine language programming.</div>
+                                        <div class='unitAnswer'>Assembly language uses letters and signs so it's easier for programmers to code the machine. Machine language programming uses purely 0 and 1s in the program so it's hard to see what the code is doing without looking at the instruction table.</div>
+                                    </div>
+                                </div>
+                                <div class='unitSection'>
+                                    <div class='unitTitle'>4.10 Impacts of CS: Privacy</div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>1) Is it possible to identify someone, perhaps a patient, knowing just the gender, birth date, and zip code? Why or why not?</div>
+                                        <div class='unitAnswer'>No, there might be more than one person who has same gender, birth date within a zip code. But it greatly reduces the difficulty of finding this certain person because more infomations can help in locating a person.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>2) Are electronic documents like paper documents? Write 2-3 sentences comparing and contrasting them.</div>
+                                        <div class='unitAnswer'>No, electronic documents are stored electronically and paper document exists in reality. Paper documents are made up of paper and electronic documents are made up of 0 and 1s. It is easier to edit paper document then electronic documents.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>3) Earlier in the course, you built the Map Tour app. In the final version, what kind of data is collected from the user? Does the user know the data is being collected? Can they opt out of providing data and still use the app?</div>
+                                        <div class='unitAnswer'>The location of the user is being collected. I think the user know that their location data is being exposed. I don't think they can opt out because the map app would not be functional without the location of the user.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>4) Is the Privacy Act effective? Explain why or why not.</div>
+                                        <div class='unitAnswer'>I think it should be effective because it's better to have a Privacy Act than having no act at all. The act should protect privacy in some degrees.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>5) Are you willing to trade some of your privacy for the convenience of having a computer or a company recommend products to you? Why or why not? Under what circumstances?</div>
+                                        <div class='unitAnswer'>No, I would rather go on to different forums to see other people's opinion about a software product instead of seeing recommendation of products online.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>6) How do we leave digital "footprints and fingerprints?" Do you think this is important for everyone to know? Why or why not?</div>
+                                        <div class='unitAnswer'>We leave digital footprints by uploading infomation or pictures online when we don't even know we did this. I think it's important for everyone to know because that way people know their infomation is being exposed.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>7) How have social media platforms such as Twitter, Instagram, Snapchat, etc. affected our privacy?</div>
+                                        <div class='unitAnswer'>They expose people's location and activity onto the internet with pictures so other people can stalk and find information about the person.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>8) In this course, you are building apps that collect data from users, the device, and its sensors. What responsibilities do we have as app developers for the data we collect?</div>
+                                        <div class='unitAnswer'>We have to be careful to not leak informations out from the database so the data is only being used within the app and not other places.</div>
+                                    </div>
+                                    <div class="unitQA">
+                                        <div class='unitQuestion'>9) Search the web for a recent news story that deals with privacy. LINK to the article and then write a paragraph summarizing the article, including any beneficial or harmful impacts on privacy. </div>
+                                        <div class='unitAnswer'>The best way to privacy is to not put private information online such as passwords and usernames. Don't expose emails and phone numbers to insecure websites. Also, use encrypted connection while online. </div>
+                                        <div class='unitAnswer'><a href="https://www.kaspersky.com/blog/privacy-ten-tips-2018/23022/" target="_blank">Article Link</a></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class='topContent contentMenu' >
