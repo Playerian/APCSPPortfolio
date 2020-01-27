@@ -655,90 +655,107 @@
                                     <div class='unitTitle'>5.2 - Logo, Part 2</div>
                                     <div class="unitQA">
                                         <div class='unitQuestion'>1) Include a screenshot of an interesting design that your Logo app made AND a screenshot of the code that created it.  </div>
-                                        <div class='unitAnswer'></div>
+                                        <div class='unitAnswer'>
+                                            <img src="img/5_2_pic1.png">
+                                            <img src="img/5_2_pic2.png">
+                                        </div>
                                     </div>
                                     <div class="unitQA">
                                         <div class='unitQuestion'>2) Describe in your own words, with a specific example from Logo, how our choice of abstractions (commands) in this lesson provides us with the ability to solve problems that couldn't be solved with the abstractions (commands) used in Logo Part 1.</div>
-                                        <div class='unitAnswer'></div>
+                                        <div class='unitAnswer'>The abstraction of rotate with parameters specified to set the angle of rotation provide an option for me to rotate in an angle other than 90 degree. Then the Logo machine can rotate at an angle like 120 degree to make triangle or any other polygon.</div>
                                     </div>
                                 </div>
                                 <div class='unitSection'>
                                     <div class='unitTitle'>5.3 - Search Algorithms</div>
                                     <div class="unitQA">
                                         <div class='unitQuestion'>1) (POGIL) Define a pseudocode algorithm that will efficiently play the guessing game.</div>
-                                        <div class='unitAnswer'></div>
+                                        <div class='unitAnswer'>
+                                            <img src="img/5_3_pic1.png">
+                                        </div>
                                     </div>
                                     <div class="unitQA">
                                         <div class='unitQuestion'>2) (POGIL) To guess a number between 1 and 100, what's the maximum number of guesses your algorithm would take?</div>
-                                        <div class='unitAnswer'></div>
+                                        <div class='unitAnswer'>The maximum number of guesses is 7 because 2^7 is 128 and 100 is less than 128, but it has to be bigger than 64 to find the number.</div>
                                     </div>
                                     <div class="unitQA">
                                         <div class='unitQuestion'>3) (POGIL) To guess a number between 1 and 500, what's the maximum number of guesses your algorithm would take?</div>
-                                        <div class='unitAnswer'></div>
+                                        <div class='unitAnswer'>The maximum number of guesses is 9 because 2^9 is 512 and 500 is less than 500.</div>
                                     </div>
                                     <div class="unitQA">
                                         <div class='unitQuestion'>4) Suppose you have a deck of cards and you want to find the Ace of Spades. If the deck is shuffled, which is the best search algorithm to use and why?</div>
-                                        <div class='unitAnswer'></div>
+                                        <div class='unitAnswer'>I would use linear search because there is no pattern in cards so binary search would not function since the deck is not sorted.</div>
                                     </div>
                                     <div class="unitQA">
                                         <div class='unitQuestion'>5) Give an example of a search problem you encounter in everyday life. Does it use sequential, binary, or some other search algorithm?</div>
-                                        <div class='unitAnswer'></div>
+                                        <div class='unitAnswer'>A search problem I use is when I search for different items to purchase in game. Since the prices of items are always sorted in game, I would use bucket sort to see different digits of the cost to find the item I want to buy.</div>
                                     </div>
                                 </div>
                                 <div class='unitSection'>
                                     <div class='unitTitle'>5.4 - Sorting Algorithms</div>
                                     <div class="unitQA">
                                         <div class='unitQuestion'>1) Bubble and Merge Sort are referred to as comparison sorts because the values of the two pieces of data are compared during each step. Why are the radix and bucket sort not comparison sorts?</div>
-                                        <div class='unitAnswer'></div>
+                                        <div class='unitAnswer'>Radix and bucket sort is not comparison sorts because they are essentially putting items in different categories instead of putting one item in front of another, that is why no comparison happens.</div>
                                     </div>
                                     <div class="unitQA">
                                         <div class='unitQuestion'>2) Which sort do you think would be the fastest if you had to sort more than one deck of cards? Why?</div>
-                                        <div class='unitAnswer'></div>
+                                        <div class='unitAnswer'>Bucket sort would be the fastest way because every card has 13 numbers and 4 suits, which would be very easy to sort with bucket sort since there is only a small amount of categories.</div>
                                     </div>
                                 </div>
                                 <div class='unitSection'>
                                     <div class='unitTitle'>5.5 - Quiz App</div>
                                     <div class="unitQA">
                                         <div class='unitQuestion'>1) Describe the significance of the global variable index. How is indexing used with lists in this app?</div>
-                                        <div class='unitAnswer'></div>
+                                        <div class='unitAnswer'>The global variable index is used to indicate the question that is currently rendering in the app. Since questions, answer, and pictures are stored in different lists, the index variable is required to keep check the current question.</div>
                                     </div>
                                     <div class="unitQA">
                                         <div class='unitQuestion'>2) Describe how parallel lists were used in this app. Why was the parallel structure of the lists necessary?</div>
-                                        <div class='unitAnswer'></div>
+                                        <div class='unitAnswer'>Parallel lists are questions, answers, and picture lists. This structure of lists are necessary because one list can only have one item at one index, thus it can not store multiple things at one index.</div>
                                     </div>
                                     <div class="unitQA">
                                         <div class='unitQuestion'>3) Include screenshots of your code for exercises 2 and 3 from the Enhancements section.</div>
-                                        <div class='unitAnswer'></div>
+                                        <div class='unitAnswer'>
+                                            <img src="img/5_5_pic1.png">
+                                            <img src="img/5_5_pic2.png">
+                                        </div>
                                     </div>
                                     <div class="unitQA">
                                         <div class='unitQuestion'>4) Include a screenshot of the code that added your extra question (exercise 4) AND explain why the code for the buttons worked without any changes after the addition of the extra question.</div>
-                                        <div class='unitAnswer'></div>
+                                        <div class='unitAnswer'>
+                                            <img src="img/5_5_pic3.png">
+                                            The button works for the extra question because the button automatically detects and fetch the question from the parallel lists according to index. Also, index would only reset to 1 after it has exceeded the length of the array, if the length increases then it would be reseted later.
+                                        </div>
                                     </div>
                                 </div>
                                 <div class='unitSection'>
                                     <div class='unitTitle'>5.6 - Quiz App Projects</div>
                                     <div class="unitQA">
                                         <div class='unitQuestion'>1) Describe your solution for the second project that added a Search button. Provide a SCREENSHOT of the search button click code that uses a complex algorithm with loops and lists. Why was a loop necessary?</div>
-                                        <div class='unitAnswer'></div>
+                                        <img src="img/5_6_pic1.png">
+                                        <div class='unitAnswer'>My solution is just search through the question and answer array and compare if the searching terms are inside the question or answer. A loop is necessary because the array is not sorted so linear search is the only way to go.</div>
                                     </div>
                                     <div class="unitQA">
                                         <div class='unitQuestion'>2) Write AP text-style pseudocode for a linear search that searches through a list to find an item x. It should display found if the x is equal to an item in the list.</div>
-                                        <div class='unitAnswer'></div>
+                                        <div class='unitAnswer'>
+                                            <img src="img/5_6_pic2.png">
+                                        </div>
                                     </div>
                                     <div class="unitQA">
                                         <div class='unitQuestion'>3) Give brief descriptions of the enhancements you added to your app for the third project, a quiz topic of your own choosing. Provide SCREENSHOTS of important blocks and describe how you used them to solve certain programming problems.</div>
-                                        <div class='unitAnswer'></div>
+                                        <img src="img/5_6_pic3.png">
+                                        <div class='unitAnswer'>The enhancement for my app is that the app is able to display highscore to the user. The highscore keeps track of the user's high score and keeps it even when app is closed.</div>
                                     </div>
                                     <div class="unitQA">
                                         <div class='unitQuestion'>4) To practice for the Create project prompt, grab a SCREENSHOT of a program code segment from your project that implements an algorithm that includes two or more algorithms within it and includes mathematical and/or logical concepts. An ideal algorithm is a procedure that you created that includes calls to other procedures that you created, where at least one of those includes math or logic (ifs or loops). Describe how each of the two algorithms within the bigger algorithm functions independently as well as in combination to form a new algorithm.  Basically, answer 2c!</div>
-                                        <div class='unitAnswer'></div>
+                                        <img src="img/5_6_pic3.png">
+                                        <div class='unitAnswer'>This is the algorithm for the answer button. It’s main function is to determine if the answer in the text box is correct or not. It does this by simply comparing the text in the text box with the corresponding text in the “Answers” list. We also added the “upcase” and “trim” blocks to make sure that the text wouldn't have to be case sensitive and would disregard any peculiar spacings at the end of an answer, Which would then move on to the other part of the algorithm. The next part of the code is the point system and the parts of the app that tell the user that they are correct or not. If the user inputs text into the textbox that compares to the text in the answer list then it would update the global score by incrementing the variable by 1, which would also then change the score label to match the global score variable. Then the high score updater is called, the correct label is set to “correct!” and the “rightPlayer” would be called and that  would play the ding sound to signify that the user is correct. If the user’s text does not compare then the algorithm would change the correct label text to “Wrong! The correct answer is…”, and play the incorrect buzzer sound to signify the user that they got the question incorrect.</div>
                                     </div>
                                 </div>
                                 <div class='unitSection'>
                                     <div class='unitTitle'>5.7 - Analyzing Algorithms</div>
                                     <div class="unitQA">
                                         <div class='unitQuestion'>1) Present the results and the analysis you did for each of the experiments in this lesson, -- i.e., the table of running times you observed, the graphs you created, and the conclusions you reached regarding the searching algorithms and sorting algorithms. Provide a clear description, referring to your graphs and your tabulated data (which are included, or linked to), to explain how you arrived at your conclusions.</div>
-                                        <div class='unitAnswer'></div>
+                                        <img src="img/5_7_pic1.png">
+                                        <div class='unitAnswer'>For searching algorithms, I found that algorithm 2 is significantly faster than algorithm 1, this is how I came to the conclusion of algorithm 2 is binary search. For sorting algorithm, I found that search 1 is very slow, search 2 is fast, and search 3 is medium speed. Since bubble sort is slowest I think it's search 1. Merge sort is the fastest so it is search 3, and the last one is bucket sort.</div>
                                     </div>
                                 </div>
                                 <div class='unitSection'>
@@ -763,44 +780,44 @@
                                 <div class='unitSection'>
                                     <div class='unitTitle'>5.9 - Impacts of CS: Web Searches</div>
                                         <div class="unitQA">
-                                            <div class='unitQuestion'>1) How do web search tools make it more efficient to find information?</div>
-                                            <div class='unitAnswer'></div>
+                                            <div class='unitQuestion'>1) How do web search tools make it more efficient to find information?</div> 
+                                            <div class='unitAnswer'>Web search tools indexes webpages so they are easier to find. Users can type in certain keywords and web search tools can give all the relevant results on the website.</div>
                                         </div>
                                         <div class="unitQA">
                                             <div class='unitQuestion'>2) When you type a word or phrase into the Google search engine, what is the search algorithm that is being used?  Explain in your own words the process used by Google's search engine.</div>
-                                            <div class='unitAnswer'></div>
+                                            <div class='unitAnswer'>Google searches use binary search to find relative indexes in its database that stored all the cached websites. Then it ranks different websites by its relevance to the searching phrase then present them to the user.</div>
                                         </div>
                                         <div class="unitQA">
                                             <div class='unitQuestion'>3) What is a captcha? How has the collective efforts of Internet users contributed to analyzing images through captchas?</div>
-                                            <div class='unitAnswer'></div>
+                                            <div class='unitAnswer'>Captcha is used online to distinguish between human and bots to prevent griefing in comment sections of websites. It usually use some kinds of distorted image of numbers and/or letters that computer can not analyze. Internet users type in datas for the bots so they can analyze the image better.</div>
                                         </div>
                                         <div class="unitQA">
                                             <div class='unitQuestion'>4) "The architecture of human knowledge has changed as a result of search." Do you agree? Explain your reasoning.</div>
-                                            <div class='unitAnswer'></div>
+                                            <div class='unitAnswer'>I agree because knowledges are being placed online where everyone with internet access can retrieve. Searching has become the gateway for human to get certain types of knowledge because users only need to type in keywords to get knowledge.</div>
                                         </div>
                                         <div class="unitQA">
                                             <div class='unitQuestion'>5) What are the differences between Figures 4.10 and Figure 4.11 in the book? Why are there differences even though they are both a Google search results page?</div>
-                                            <div class='unitAnswer'></div>
+                                            <div class='unitAnswer'> The results of the searches are different even though the search query is the same. The reason that there are differences is because Google takes account of local regulation and culture as part of the algorithm in determining what results are given to the user.</div>
                                         </div>
                                         <div class="unitQA">
                                             <div class='unitQuestion'>6) How do you think mobile computing might have influenced web searches? Would you retain your search history or delete it? Why?</div>
-                                            <div class='unitAnswer'></div>
+                                            <div class='unitAnswer'>Mobile computing influence web searches because now every person can uses searching anywhere as long as they have internet access. This creates more demand for web searches because people can search on their mobile device when they don't know something.</div>
                                         </div>
                                         <div class="unitQA">
                                             <div class='unitQuestion'>7) Would you retain your search history or delete it? Why?</div>
-                                            <div class='unitAnswer'></div>
+                                            <div class='unitAnswer'>I retain my search history because I go to a lot of different websites, and I usually forgot most of them. Search histories help me remind what websites I went to because sometimes I would like to go back to them to find useful informations.</div>
                                         </div>
                                         <div class="unitQA">
                                             <div class='unitQuestion'>8) Should a researcher place absolute trust in a search engine? Why or why not?</div>
-                                            <div class='unitAnswer'></div>
+                                            <div class='unitAnswer'>No, researchers need to doubt a search engine because there are many different biases involved in search engine's algorithm. A researcher may need to use different search engine and compare and contrast to find the best result.</div>
                                         </div>
                                         <div class="unitQA">
                                             <div class='unitQuestion'>9) The authors claim "search is a new form of control over information" (p. 111) and "search is power" (p. 145). Why might it be important to talk about the social implications of searching on the Internet?</div>
-                                            <div class='unitAnswer'></div>
+                                            <div class='unitAnswer'>It is important to talk about the social implication of searching because searching is becoming the main way for regular people to reach informations. This causes search engine to have great power in controlling what people see and what people understand.</div>
                                         </div>
                                         <div class="unitQA">
                                             <div class='unitQuestion'>10) How have search trends been used to predict information? What are the positive and negative impacts of using trends to make predictions?</div>
-                                            <div class='unitAnswer'></div>
+                                            <div class='unitAnswer'>Search trends can be use to predict what people care about. One example would be searching positive or negative informations about a presidential candidate. Positive impact would be able to feed users the exact information they need. Negative impact would be privacy of users would be nonexistant.0</div>
                                         </div>
                                         <div class="unitQA">
                                             <div class='unitQuestion'>11) Find and read an article about web searches or algorithms. Write a 3-4 paragraph summary of the article. Include the author's name, the title of the article, the date it was published, and a link to the article.</div>
